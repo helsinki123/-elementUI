@@ -1,0 +1,123 @@
+/**
+ * @Author: 'LanYue'
+ * @UpdateDate: 2021/11/09/15:44
+ */
+ .table {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    &-main{
+      flex: 1;
+    }
+    ::v-deep {
+      .details-btn-flex{
+        display: flex;
+        justify-content: space-evenly;
+        .details-btn {
+          color: #1271EC;
+          cursor: pointer;
+        }
+      }
+      .even-row {
+        background: #121C3F;
+        color: white;
+      }
+  
+      .odd-row {
+        background: #0A1533;
+        color: white;
+      }
+  
+      .el-table__empty-block {
+        background: #0B1C47
+      }
+      .el-table__body-wrapper{
+        background: #0B1C47
+      }
+      .el-table__body-wrapper{
+        scrollbar-width: none;
+      }
+  
+      .el-table td.el-table__cell, .el-table th.el-table__cell.is-leaf {
+        border: none;
+      }
+  
+      .el-table--enable-row-hover .el-table__body tr:hover > td {
+        background-color: #212e3e;
+        color: white;
+      }
+      .el-table__fixed-right-patch{
+        background: #121C3F;
+      }
+      .el-table--border th.el-table__cell, .el-table__fixed-right-patch{
+        border-bottom: #121C3F;
+      }
+      .el-table--striped .el-table__body tr.el-table__row--striped.current-row td, .el-table__body tr.current-row > td, .el-table__body tr.hover-row.current-row > td, .el-table__body tr.hover-row.el-table__row--striped.current-row > td, .el-table__body tr.hover-row.el-table__row--striped > td, .el-table__body tr.hover-row > td {
+        background-color: #212e3e;
+        color: white;
+      }
+  
+      .el-table--scrollable-x .el-table__body-wrapper {
+        background: #0B1C47;
+      }
+  
+      .el-table::before,
+      .el-table__fixed-right::before, .el-table__fixed::before {
+        height: 0;
+      }
+      .table-default__0, .table-default__-1{
+        color: #FF1A1A;
+      }
+      .table-default__1{
+        color: #04FEB8;
+      }
+      .table-default__2, .table-default__3{
+        color: #ED8500;
+      }
+      .el-progress-bar__inner{
+        background: #1271EC;
+      }
+      .el-progress-bar__outer,.el-progress-bar__inner{
+        border-radius: 0;
+      }
+      .el-pagination__total{
+        color: white;
+      }
+      .column-flex{
+        display: flex;
+        align-items: center;
+        &-normal{
+          flex: none;
+          display: block;
+          word-break: break-word;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: 100%;
+        }
+        img{
+          margin-right: 5px;
+        }
+      }
+    }
+  
+    ::v-deep &-pagination {
+      text-align: center;
+      margin-top: 16px;
+  
+      .el-pagination.is-background .el-pager li:not(.disabled).active {
+        background: #1271EC;
+      }
+  
+      .el-pagination.is-background .btn-next, .el-pagination.is-background .btn-prev, .el-pagination.is-background .el-pager li {
+        background: #516387;
+        color: white;
+      }
+      .el-pagination__sizes .el-input .el-input__inner{
+        background: #526387;
+        color: #fff;
+        border: none;
+      }
+    }
+  }
+  

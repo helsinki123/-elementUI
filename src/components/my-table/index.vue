@@ -86,12 +86,11 @@ export default {
     computed: {},
     methods: {
         currentChange(val){
-            console.log("aaaaaaaaaaaaaaaaaa",val);
-            this.pages.query.pageNo = val;
+            this.pages.query.pageNo = val;//设置分页器的current-page属性
             this.$emit('handlecurrentChange', val)
         },
         handleSizeChange(val){
-            this.pages.query.pageSize = val;
+            this.pages.query.pageSize = val;//设置分页器的page-size属性
             this.$emit('handlecurrentChange', val)
         }
     },
@@ -99,5 +98,6 @@ export default {
     mounted() { }
 };
 </script>
-<style lang="sass" scoped>
+<style lang="scss" scoped>
+@import "./index";
 </style>

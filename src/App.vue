@@ -5,7 +5,7 @@
     <Table :table-columns="columns" 
     :table-data="tableData" 
     :pages="{ query, total }" 
-    :loading="false"
+    v-loading=loading
     @handlecurrentChange="handlecurrentChange"
     >
       <template slot="extraHandleButtons">
@@ -86,6 +86,7 @@ export default {
         pageNo:1
       },
       total:100,
+      loading:false,
 
     }
 
@@ -94,12 +95,24 @@ export default {
     handleClick(){
       console.log("aaa");
     },
-    handlecurrentChange(val){
+    async handlecurrentChange(val){
       console.log("获取数据",val);
+      try {
+                this.loading = true;
+                // const res = await this.$api[methods](this.query);
+                // this.dataList = res[prop] || res;
+                // this.total = res.total || this.dataList.length;
+                await setTimeout(()=>{
+                  this.loading = false;
+                },2000)
+            }catch (e) {
+              console.log(e);
+              //  if (!methods) console.error('Methods is empty！')
+            }finally {
+              //不会等待异步
+                // this.loading = false;
+            }
     },
-    // handleSizeChange(){
-    //   console.log("handleSizeChange");
-    // }
   }
 }
 </script>
