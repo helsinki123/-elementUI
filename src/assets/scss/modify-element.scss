@@ -1,0 +1,23 @@
+/**
+ * @Author: 'LanYue'
+ * @UpdateDate: 2021/11/18/15:35
+ */
+.el-message--error{
+  background-color: #f39fa0;
+  border: none;
+  border-radius: 6px;
+  .el-icon-error{
+    color: #0B102A;
+  }
+  .el-message__content{
+    color: #0B102A;
+    font-weight: 500;
+    font-size: 14px;
+  }
+}
+.el-button--text{
+  color: #1271EC;
+}
+.el-button.is-loading:before{
+  background-color: transparent;
+}

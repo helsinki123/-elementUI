@@ -1,0 +1,122 @@
+body {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  min-width: 1440px;
+  overflow: auto;
+  background: #0b102a;
+  height: calc(100vh - 60px);
+  scrollbar-width: none;
+
+  .alarm-btn{
+    border: none;
+    font-size: 14px;
+    color: white;
+    height: 30px;
+    margin-top: 10px;
+    font-weight: 500;
+    width: 80px;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  .alarm-error{
+    background: #f56c6c;
+  }
+  .alarm-cancel{
+    background: #909399;
+  }
+  .el-dialog__body{
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .iot-text{
+    margin-bottom: 10px;
+  }
+}
+
+::-webkit-scrollbar-track-piece {
+  background: linear-gradient(270deg, #0b1c47, #495163);
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(270deg, #495163, #0b1c47);
+}
+
+.zy-home-tabs__span {
+  color: #7b7a7d;
+  cursor: pointer;
+  text-align: center;
+  margin-left: 30px;
+  font-size: 15px;
+}
+
+.zy-home-tabs__span__active {
+  color: #fff;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: '';
+    width: 50%;
+    height: 3px;
+    background: #ed8500;
+    border-radius: 2px;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    box-shadow: 0 0 8px #ed8500;
+  }
+}
+
+video {
+  object-fit: fill !important;
+}
+
+.BMap_cpyCtrl {
+  display: none;
+}
+.anchorBL {
+  display: none;
+}
+#app{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  .app-main{
+    height: calc(100vh - 60px);
+  }
+  .el-dropdown [disabled]{
+    color: #fff;
+  }
+}
+
+.equipment-title {
+  height: 45px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+
+  &-back {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: white;
+    margin-left: 20px;
+    cursor: pointer;
+
+    img {
+      margin-right: 5px;
+      width: 28px;
+    }
+  }
+}
